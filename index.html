@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>OOCSS, BEM, WTF</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Volkhov:700italic" />
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sitewards.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!--link rel="stylesheet" href="css/print/pdf.css"-->
+
+	</head>
+
+	<body>
+
+		<div class="reveal reveal--sitewards">
+
+
+			<div class="slides">
+                <section>
+                    <aside class="notes">
+                        <p>Vorstellung:</p>
+                        <p>Arbeit</p>
+                        <p>evtl. Projekte</p>
+                    </aside>
+                </section>
+
+                <section>
+
+                    <pre><code class="xml css">
+    <div class="widget">
+        <h1 class="headline">Foo</h1>
+        <div class="media">
+            <img src="logo.png" alt="Foo Corp logo" class="img-rev">
+            <div class="body">
+                <h3 class="alpha">Welcome to Foo Corp</h3>
+                <p class="lede">Foo Corp is the best, seriously!</p>
+            </div>
+        </div>
+        <div class="copy">Foo bar</div>
+    </div>
+                    </code></pre>
+
+                    <aside class="notes">
+                        <p>
+                            Präsentationsinhalt:
+                        </p>
+                        <p>
+                            Wir sprechen über CSS ... wow
+                        </p>
+                    </aside>
+                </section>
+
+                <section data-background="img/HomerSimpson.png">
+                    <h1>D'oh</h1>
+
+                    <aside class="notes">
+                        <p>
+                            code nicht lesbar
+                        </p>
+                        <p>
+                            code nicht erweiterbar
+                        </p>
+                        <p>
+                            code muss überschrieben werden
+                        </p>
+                        <p>
+                            und nun
+                        </p>
+                    </aside>
+                </section>
+
+				<section>
+				    <h2>"Our (CSS) best practises<br>are killing us!"</h2>
+                    <p>- nicole sullivan @stubbornella</p>
+                    <aside class="notes">
+                        <p>
+                            we all have best practises more or less
+                        </p>
+                        <p>
+                            but do they work for us? mostly yes but only for us
+                        </p>
+                        <p>
+                            so what we can do?
+                        </p>
+                    </aside>				
+                </section>  
+
+                <section>
+                    <section>
+                        <h2 class="fragment" data-fragment-index="0">IndividualCSS</h2>
+                        <h2 class="fragment" data-fragment-index="1">SMACSS</h2>
+                        <h2 class="fragment" data-fragment-index="2">DRYCSS</h2>
+                        <h2 class="fragment" data-fragment-index="3">OOCSS</h2>
+                        <h2 class="fragment" data-fragment-index="4">TitleCSS</h2>
+                        <h2 class="fragment" data-fragment-index="5">BEM</h2>
+                    </section>
+
+                    <section>
+                        <h1>WTF?</h1>
+                        <p>it is just CSS, isn't it?</p>
+
+                        <aside class="notes">
+                            <p>
+                                Wir optimieren javascript warum nicht css
+                            </p>
+                            <p>
+                                Höheres level von css
+                            </p>
+                            <p>
+                                Gibt viele guidelines
+                            </p>
+                            <p>
+                                Am wichtigsten ist dass es funktioniert
+                            </p>
+                        </aside>
+                    </section>
+
+                </section>
+
+                <section>
+                    <h1>Myth of CSS</h1>
+
+                    <h3 class="fragment current-visible grow" data-fragment-index="0">css is semantic?</h3>
+                    <br>
+                    <h3 class="fragment current-visible grow" data-fragment-index="1">meanings from id?</h3>
+                    <br>
+                    <h3 class="fragment current-visible grow" data-fragment-index="2">walking tag by tag is fast?</h3>
+    
+                    <aside class="notes">
+                        <p>
+                            css is just match
+                        </p>
+                        <p>
+                            <ul>
+                                <li>uid</li>
+                                <li>faster on the direct compare</li>
+                                <li>not repeatable</li>
+                                <li>cause repeted styles</li>
+                                <li>etc.</li>
+                            </ul>
+                        </p>      
+                        <p>
+                            tag after tag is sloooooow
+                        </p>
+                    </aside>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>who cares?</h2>
+                        <h1>Deliver the pouch</h1>
+                        
+                        <aside class="notes">
+                            <p>
+                                you have to deliver the pouch nobody care?
+                            </p>
+                            <p>
+                                what's about the people around
+                            </p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>the audience</h2>
+                        <p>reliable. robust. entertaning.</p>
+                    </section>
+
+                    <section>
+                        <h2>some others like you</h2>
+                        <h1 class="fragment" >Yeah Code!</h1>
+                    </section>
+
+                    <section>
+                        <h2>people who care<br>about the beauty</h2>
+                        <p>design. conversion. experience.</p>
+                    </section>
+
+                    <section>
+                        <h2>projectleaders</h2>
+                        <p>fast. reusable. high value.</p>
+                    </section>
+                </section>
+
+
+                <section>
+                    <h2>ookay we use minus</h2>
+                    <br>
+                    <pre><code class="xml css">
+    <div class="widget-foo">
+        <h2 class="widget-title">
+            <div class="widget-body">
+                <img class="widget-thumbnail" />
+            </div>
+        </h2>
+        <div class="media-video"></div>
+        <div class="widget-social-network-google"></div>
+    </div>
+                    </code></pre>
+
+                    <aside class="notes">
+                        <p>
+                            visually not good for multiple classes
+                        </p>
+                        <p>
+                            no idea what is optional
+                        </p>
+                        <p>
+                            diconnected from parent
+                        </p>
+                        <p>
+                            probleme bei namen mit minus
+                        </p>
+                    </aside>
+                </section>
+
+
+				<section>
+					<section>
+						<h1>OOCSS</h1>
+                        <br>
+                        <pre><code class="xml css">
+    <div class="modul [style]">
+        <div class="rahmen [style]">
+            <div class="headline [style]">
+                <h1>Foobar</h1>
+            </div>
+            <div class="body [style]">
+                <a class="element [style]" href="#">Foo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- so it is every time -->
+    <div class="[skelett] [style]"></div>
+
+                        </code></pre>
+                        <aside class="notes">
+                            <p>
+                                cares about more than structure or naming
+                            </p>
+                            <p>
+                                Avoid three bound classes.
+                            </p>
+                            <p>
+                                Separate structure, frame and design
+                            </p>
+                            <p>
+                                Separate container and content
+                            </p>
+                            <p>
+                                frameworks as bootstrap.
+                            </p>
+
+                            <ul>
+                                <li>reusable classes</li>
+                                <li>separation of skeleton and style</li>
+                                <li>Kombinationen von Selektoren kreieren Blöcke</li>
+                            </ul>                            
+                        </aside>
+					</section>
+					
+                    <section>
+						<h2>disadvantages</h2>
+                        <p class="fragment" data-fragment-index="1">disorientation</p>
+                        <p class="fragment" data-fragment-index="2">divergences</p>
+                        <p class="fragment" data-fragment-index="3">-- repetition --</p>
+
+                        <aside class="notes">
+                            <p>
+                                Nachteil bei OOCSS sind 'insemantic classes'.
+                            </p>
+                            <p>
+                                But how we should talk about it?
+                            </p>
+                            <p>
+                                strict rythmn.
+                            </p>
+                            <p>
+                                some repetition of code parts
+                            </p>
+                        </aside>
+					</section>
+                    
+                    <section>
+                        <h2>teach OOCSS to DRY</h2>
+                        <br>
+                        <pre><code class="css">
+    %separator
+        border-top: 1px solid black
+
+    hr
+        @extend %separator
+
+    .separator
+        @extend %separator
+
+    hr, .separator {
+        border-top: 1px solid black
+    }
+                        </code></pre>
+
+                    </section>
+				</section>
+
+                <section>
+                    <section>
+                        <h1>BEM</h1>
+                        <br>
+                        <pre><code class="css">
+    .block {}
+    
+    .block__element {}
+    
+    .block--modifier {}
+    
+    .element--modifier {}
+    
+    .block__element--modifier
+                        </code></pre>
+
+
+                        <aside class="notes">
+                            <p>
+                                methodology thought up by the guys at Yandex
+                            </p>
+                            <p>
+                                describes parent block also childs and modifiers
+                            </p>
+                            <p>
+                                smart way of naming your CSS classes
+                            </p>
+                            <p>
+                                transparancy, meaning
+                            </p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>In the wild</h2>
+                        <br>
+                        <pre><code class="xml css">
+    <div class="widget widget--social">
+        <h2 class="widget__title">Foo</h2>
+        <div class="widget__body">
+            <div class="widget__network  widget__network--fbook"></div>
+            <div class="widget__network  widget__network--gplus"></div>
+        </div>
+    </div>
+                        </code></pre>
+
+                        <p><br>use 2 spaces to separate classes</p>
+                        <pre><code class="xml css">
+    <div class="widget__network  network--google"></div>
+                        </code></pre>
+
+                        <aside class="notes">
+                            <p>
+                                Wiederbenutzbar
+                            </p>
+                            <p>
+                                Styling mit Modifikators
+                            </p>
+                            <p>
+                                Ineinander Verschachtelbar
+                            </p>
+                            <p>
+                                Gute gzip Komprimierung
+                            </p>
+                            <p>
+                                Trick ist zu wissen wann es eingesetzt werde sollte
+                            </p>
+                            <p>
+                                Keine Regel für den start eines blocks
+                            </p>
+                        </aside>
+
+                    </section>
+
+                    <section>
+                        <h2>what's about javascript?</h2>
+
+                        <p><br>hook-classes:</p>
+                        <pre><code class="xml css">
+    <div class="widget__network  network--google js-flyout"></div>
+                        </code></pre>
+
+                        <p><br>data attribute:</p>
+                        <pre><code class="xml css">
+    <div class="..." data-js="flyout" data-flyout-action="right"></div>
+                        </code></pre>
+
+                        <aside class="notes">
+                            <p>
+                                Separate JS Anbindung
+                            </p>
+                            <ul>
+                                <li>Flexibilität</li>
+                                <li>Wiederverwertbares JS</li>
+                                <li>Bessere Kontrolle</li>
+                                <li>Trennung von Modul JS und Style JS</li>
+                            </ul>
+                            <p>
+                                Über Data-Attribute lässt sich JS aus dem HTML heraus am besten aktivieren und kontrollieren.
+                            </p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>teach BEM with SASS</h2>
+                        <br>
+                        <pre><code class="css">
+    .widget {
+        &__title {}
+        &__body {}
+        &__network {
+            &--gplus {}
+        }
+
+        &--social {}
+    }
+                        </code></pre>
+
+                        <p>
+                            <br>variables with BEM:
+                        </p>
+                        <pre><code class="css">
+    $price__color--base: #333333 !default;
+    $price__color--sale: #ff0000 !default;
+    $price__family: "Helvetica Neue", Helvetica, sans-serif !default;
+                        </code></pre>
+
+                        <aside class="notes">
+                            <p>
+                                Aber jeder macht es etwas anders wichtig ist nur das es Sinn macht.<br>
+                                Sollte generell im Team und in der Planung festgelegt werden.
+                            </p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <pre><code class="xml css" style="max-height: 620px">
+    @mixin getWidget ($hPosition: left, $vPosition: top, $offset: 7%) {
+        @if $vPosition == top { top: 50px; }
+        @if $vPosition == middle { top: 100px; }
+        > div {
+            @if $hPosition == center {
+                text-align: center;
+            } @else {
+                float: $hPosition;
+                @media #{$lg-screens} {
+                    margin-#{$hPosition}:$offset;
+                }
+            }
+        }
+    }
+    .widget__body {
+        background: red;
+
+        &--left-top {
+            @include getWidget ();
+        }
+        &--left-middle {
+            @include getWidget ($vPosition: middle);
+        }
+    }
+                        </code></pre>
+                    </section>
+
+                </section>
+
+				<section>
+					<h2>and whats now?</h2>
+                    <blockquote>
+                        <br>You don't get points for being pretty,<br>you get points for being powerful<br><br><small>- Harry Roberts</small><br><br>
+                    </blockquote>
+
+                    <aside class="notes">
+                        <p>
+                            Kombiniert gute Eigenschaften und macht das Beste draus!
+                        </p>
+                        <p>
+                            Plant und arbeitet Projektbezogen an einer Guideline.
+                        </p>
+                        <p>
+                            Denkt an die Nutzbarkeit mit Javascript.
+                        </p>
+                    </aside>
+				</section>
+
+                <section data-background="img/hurray.png">
+
+                </section>
+
+                <section>
+                    
+                    <h3>OSCSS</h3>
+                    <p>
+                        <small>http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/</small><br>
+                        <small>https://github.com/stubbornella/oocss/wiki</small>
+                    </p>
+                    <h3><br>BEM</h3>
+                    <p>
+                        <small>http://bem.info/</small><br>
+                        <small>http://www.mathayward.com/modular-css-with-sass-and-bem/</small>
+                    </p>
+                    <h3><br>brought to you by</h3>
+                    <p><small>Tobias Hartmann @ToH_82</small></p>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: 'sitewards',
+				transition: Reveal.getQueryHash().transition || 'default',
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
